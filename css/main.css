@@ -1,0 +1,82 @@
+@import url(utils.css);
+@import url(variables.css);
+
+body {
+    background-color: var(--yellow-background);
+    height: 100vh;
+    flex-direction: column;
+    position: relative;
+}
+
+.card {
+    width: 24rem;
+    height: 32.625rem;
+    border-radius: 1.25rem;
+    box-shadow: var(--card-shadow);
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--spacing-300);
+    background-color: var(--white-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: var(--spacing-300);
+}
+
+.card__image img {
+    border-radius: .625rem;
+}
+
+.card__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: var(--spacing-150);
+}
+
+.card__author {
+    align-self: flex-start;
+    width: 8.125rem;
+    height: 2rem;
+    justify-content: flex-start;
+}
+
+.card__author img {
+    width: 2rem;
+    height: 2rem;
+    margin-right: var(--spacing-150);
+}
+
+.card__author p {
+    font-size: var(--text-preset-3);
+    white-space: nowrap;
+}
+
+.card__category {
+    width: 5.125rem;
+    height: 1.8125rem;
+    background-color: var(--yellow-background);
+    color: var(--gray-950);
+    border-radius: .25rem;
+    font-size: --text-preset-3;
+    padding: var(--spacing-50) var(--spacing-150);
+}
+
+.card__title {
+    font-size: var(--text-preset-1);
+    color: var(--gray-950);
+}
+
+.card__title-hover:hover {
+    color: var(--yellow-background);
+}
+
+.card__description {
+    font-size: var(--text-preset-2);
+    color: var(--gray-500);
+}
+
+@media screen and (max-width: 375px) {
+    .card {
+        width: 20.4375rem;
+        height: 31.3125rem;
+    }
+}
